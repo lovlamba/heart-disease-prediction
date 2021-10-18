@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        fieldset {
+            width: 400px;
+            height: 600px;
+            background-color: #eeeeee;
+        }
+
+        legend {
+            background-color: rgb(2, 140, 253);
+            color: white;
+            padding: 5px 10px;
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        body {
+            text-align: center;
+            height: 80px;
+            background-image: url('/static/heart.jpg');
+            background-repeat: no-repeat;
+            background-size: 1550px 750px;
+        }
+
+        div.form {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        form {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .center {
+            margin: left;
+        }
+
+        input[type=button],
+        input[type=submit],
+        input[type=reset] {
+            background-color: #f44336;
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form name="form1">
+            <fieldset>
+                <center>
+                    <h1>Heart Disease Prediction</h1>
+                </center>
+                <div class="center">
+                    <label for="age">Enter your Age :</label>
+                    <input type="number" id="age" name="age"><br><br>
+                </div>
+                <div class="center">
+                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                    <input type="radio" id="gender" name="gender" value="1">
+                    <label for="yes">Male</label><br>
+                    <input type="radio" id="gender" name="gender" value="0">
+                    <label for="no">Female</label><br>
+                </div>
+                <div class="center">
+                    <label for="cp">Enter CP value(0-3) :</label>
+                    <input type="number" id="cp" name="cp"><br><br>
+                </div>
+                <div class="center">
+                    <label for="thalach">Enter thalach value(70-200) :</label>
+                    <input type="number" id="thalach" name="thalach"><br><br>
+                </div>
+                <div class="center">
+                    <legend class="col-form-label col-sm-2 pt-0">Enter exhang value :</legend>
+                    <input type="radio" id="exhang" name="exhang" value="0">
+                    <label for="exhang">0</label><br>
+                    <input type="radio" id="exhang" name="exhang" value="1">
+                    <label for="exhang">1</label><br>
+                </div>
+                <div class="center">
+                    <label for="oldpeak">Enter oldpeak value(0.0-6.0) :</label>
+                    <input type="number" step="any" id="oldpeak" name="oldpeak"><br><br>
+                </div>
+                <div class="center">
+                    <legend class="col-form-label col-sm-2 pt-0">Enter Slope value :</legend>
+                    <input type="radio" id="slope" name="slope" value="0">
+                    <label for="above">0</label><br>
+                    <input type="radio" id="slope" name="slope" value="1">
+                    <label for="below">1</label><br>
+                    <input type="radio" id="slope" name="slope" value="2">
+                    <label for="below">2</label><br>
+                </div>
+                <center><input type="submit" value="Submit"></center>
+            </fieldset>
+        </form>
+    </div>
+    <br>
+    <h1><b>{{variable}}</b></h1>
+</body>
+
+</html>
